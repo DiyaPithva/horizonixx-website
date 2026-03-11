@@ -1,101 +1,151 @@
-import Image from "next/image";
+import type { Metadata, Viewport } from 'next';
+import { Hero } from '@/components/homepage/hero';
+import { ScrollingBanner } from '@/components/homepage/scrolling-banner';
+import { FeaturedProducts } from '@/components/homepage/featured-products';
+import { WhyChooseUs } from '@/components/homepage/why-choose-us';
+import { CompanyStats } from '@/components/homepage/company-stats';
+import { TestimonialSlider } from '@/components/homepage/testimonial-slider';
+import { ProductCategories } from '@/components/homepage/product-categories';
+import { AnimatedSection } from '@/components/ui/animated-section';
+
+// Viewport configuration
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+};
+
+// SEO Metadata
+export const metadata: Metadata = {
+  title: 'HORIZONIXX INTERNATIONAL - Global Exporter of Premium Herbal & Natural Products',
+  description: 'Supplying high-quality herbal raw materials, cosmetic ingredients, spices and healthcare products to industries worldwide. ISO 9001:2015 certified with 25+ countries served.',
+  keywords: [
+    'Herbal Exporter India',
+    'Moringa Powder Exporter',
+    'Bulk Herbal Ingredients Supplier',
+    'Ayurvedic Raw Material Exporter',
+    'Natural Products Supplier',
+    'Cosmetic Ingredients Exporter',
+    'Spices Exporter',
+    'Dehydrated Foods Supplier',
+    'ISO Certified Herbal Company'
+  ],
+  authors: [{ name: 'HORIZONIXX INTERNATIONAL' }],
+  creator: 'HORIZONIXX INTERNATIONAL',
+  publisher: 'HORIZONIXX INTERNATIONAL',
+  robots: 'index, follow',
+  
+  // OpenGraph tags
+  openGraph: {
+    title: 'HORIZONIXX INTERNATIONAL - Global Herbal Products Exporter',
+    description: 'Premium herbal products, cosmetic ingredients, spices and healthcare products. ISO certified with global reach to 25+ countries.',
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://horizonixx-international.com',
+    siteName: 'HORIZONIXX INTERNATIONAL',
+    images: [
+      {
+        url: '/images/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'HORIZONIXX INTERNATIONAL - Premium Herbal Products Exporter'
+      }
+    ]
+  },
+  
+  // Twitter Card
+  twitter: {
+    card: 'summary_large_image',
+    title: 'HORIZONIXX INTERNATIONAL - Global Herbal Products Exporter',
+    description: 'Premium herbal products, cosmetic ingredients, spices and healthcare products. ISO certified with global reach.',
+    images: ['/images/twitter-card.jpg']
+  },
+  
+  // Additional metadata
+  alternates: {
+    canonical: 'https://horizonixx-international.com'
+  },
+  
+  metadataBase: new URL('https://horizonixx-international.com')
+};
+
+// Structured Data for Organization
+const organizationStructuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'HORIZONIXX INTERNATIONAL',
+  description: 'Global distributor of herbal products, cosmetic ingredients, healthcare equipment, spices, and dehydrated foods',
+  url: 'https://horizonixx-international.com',
+  logo: 'https://horizonixx-international.com/images/logo.png',
+  contactPoint: {
+    '@type': 'ContactPoint',
+    telephone: '+91-99748-23781',
+    contactType: 'customer service',
+    areaServed: 'Worldwide',
+    availableLanguage: 'English'
+  },
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: 'B/22 Suncity Park',
+    addressLocality: 'Ankleshwar',
+    addressRegion: 'Gujarat',
+    postalCode: '393002',
+    addressCountry: 'IN'
+  },
+  sameAs: [
+    'https://www.linkedin.com/company/horizonixx-international',
+    'https://www.facebook.com/horizonixxinternational'
+  ],
+  foundingDate: '2014',
+  numberOfEmployees: '50-100',
+  industry: 'Import/Export',
+  keywords: 'herbal products, cosmetic ingredients, spices, dehydrated foods, healthcare equipment',
+  certification: 'ISO 9001:2015'
+};
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <>
+      {/* Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(organizationStructuredData)
+        }}
+      />
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
+      {/* Main Content */}
+      <main className="bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50">
+        {/* 1. Hero Section */}
+        <Hero />
+
+        {/* 2. Scrolling Banner */}
+        <ScrollingBanner />
+
+        {/* 3. Featured Products Section */}
+        <AnimatedSection animation="slideUp" delay={0.2}>
+          <FeaturedProducts />
+        </AnimatedSection>
+
+        {/* 4. Product Categories Section */}
+        <AnimatedSection animation="slideUp" delay={0.1}>
+          <ProductCategories />
+        </AnimatedSection>
+
+        {/* 5. Why Choose Horizonixx */}
+        <AnimatedSection animation="slideUp" delay={0.1}>
+          <WhyChooseUs />
+        </AnimatedSection>
+
+        {/* 6. Our Impact in Numbers */}
+        <AnimatedSection animation="slideUp" delay={0.1}>
+          <CompanyStats />
+        </AnimatedSection>
+
+        {/* 7. What Our Global Partners Say (Testimonials) */}
+        <AnimatedSection animation="slideUp" delay={0.1}>
+          <TestimonialSlider />
+        </AnimatedSection>
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+    </>
   );
 }
