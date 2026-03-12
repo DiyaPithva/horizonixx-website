@@ -84,7 +84,7 @@ export function ProductCard({
       {/* Product Information */}
       <div className="flex-1 flex flex-col p-6">
         {/* Product Name */}
-        <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-3 group-hover:text-green-600 transition-colors duration-300">
+        <h3 className="text-lg font-bold text-foreground dark:text-white mb-3 group-hover:text-green-600 transition-colors duration-300">
           {product.name}
         </h3>
 

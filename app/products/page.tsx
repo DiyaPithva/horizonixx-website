@@ -38,9 +38,9 @@ export default async function ProductsPage({
         <div className="absolute inset-0 bg-gradient-to-br from-green-100/40 via-white to-emerald-100/40"></div>
 
         {/* Decorative blur circles */}
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-green-200/30 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-10 right-10 w-96 h-96 bg-emerald-200/30 rounded-full blur-3xl"></div>
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-green-200/10 rounded-full blur-2xl"></div>
+          <div className="absolute bottom-10 right-10 w-96 h-96 bg-emerald-200/10 rounded-full blur-2xl"></div>
         </div>
 
         {/* Floating Leaves */}
@@ -71,7 +71,7 @@ export default async function ProductsPage({
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
 
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4">
               Premium Herbal, Cosmetic & Dehydrated Products
             </h1>
 

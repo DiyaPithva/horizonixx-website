@@ -122,7 +122,7 @@ export function FeaturedProducts() {
 
                   {/* Product Info */}
                   <div className="p-4 sm:p-6 flex-1 flex flex-col">
-                    <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-green-600 transition-colors">
+                    <h3 className="text-lg sm:text-xl font-bold text-foreground dark:text-white mb-3 group-hover:text-green-600 transition-colors">
                       {product.name}
                     </h3>
                     <p className="text-gray-600 dark:text-gray-300 text-sm mb-4 sm:mb-6 line-clamp-2 flex-1">

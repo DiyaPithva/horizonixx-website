@@ -1,7 +1,4 @@
-'use client';
-
 import Link from 'next/link';
-import { motion } from 'framer-motion';
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -98,16 +95,14 @@ export function Footer() {
             </p>
             <div className="flex space-x-3 sm:space-x-4">
               {socialLinks.map((social) => (
-                <motion.a
+                <a
                   key={social.label}
                   href={social.href}
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="w-8 h-8 sm:w-10 sm:h-10 bg-primary/10 hover:bg-primary hover:text-white rounded-lg flex items-center justify-center text-primary transition-colors duration-200"
+                  className="w-8 h-8 sm:w-10 sm:h-10 bg-primary/10 hover:bg-primary hover:text-white rounded-lg flex items-center justify-center text-primary transition-all duration-200 hover:scale-110"
                   aria-label={social.label}
                 >
                   {social.icon}
-                </motion.a>
+                </a>
               ))}
             </div>
           </div>
@@ -240,7 +235,7 @@ export function Footer() {
         <div className="border-t border-border mt-6 sm:mt-8 pt-6 sm:pt-8">
           <div className="text-center">
             <p className="text-xs sm:text-sm text-muted mb-3 sm:mb-4">
-              © 2026 HORIZONIXX INTERNATIONAL. All rights reserved.
+              © {currentYear} HORIZONIXX INTERNATIONAL. All rights reserved.
             </p>
             <div className="flex flex-col sm:flex-row justify-center space-y-2 sm:space-y-0 sm:space-x-6">
               <Link

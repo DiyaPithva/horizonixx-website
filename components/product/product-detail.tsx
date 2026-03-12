@@ -296,7 +296,7 @@ export function ProductDetail({ product }: ProductDetailProps) {
             <a
               href="/contact"
               className="
-                px-6 py-3 bg-primary text-primary-foreground
+                px-6 py-3 bg-primary text-white
                 rounded-lg font-medium
                 hover:bg-primary/90 transition-colors
                 text-center
@@ -309,9 +309,9 @@ export function ProductDetail({ product }: ProductDetailProps) {
               target="_blank"
               rel="noopener noreferrer"
               className="
-                px-6 py-3 bg-secondary text-secondary-foreground
+                px-6 py-3 bg-green-600 text-white
                 rounded-lg font-medium
-                hover:bg-secondary/90 transition-colors
+                hover:bg-green-700 transition-colors
                 text-center flex items-center justify-center gap-2
               "
             >

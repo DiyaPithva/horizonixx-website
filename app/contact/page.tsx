@@ -129,10 +129,10 @@ export default function ContactPage() {
       {/* Modern Hero Section */}
       <section className="relative pt-8 pb-16 sm:pb-20 md:pb-24 overflow-hidden">
         {/* Colorful Background Elements */}
-        <div className="absolute inset-0">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-br from-green-400/20 to-emerald-400/20 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-br from-teal-400/20 to-cyan-400/20 rounded-full blur-3xl"></div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-br from-emerald-300/10 to-green-300/10 rounded-full blur-3xl"></div>
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-br from-green-400/20 to-emerald-400/20 rounded-full blur-2xl opacity-10"></div>
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-br from-teal-400/20 to-cyan-400/20 rounded-full blur-2xl opacity-10"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-br from-emerald-300/10 to-green-300/10 rounded-full blur-2xl opacity-10"></div>
         </div>
 
         {/* Floating Herbal Elements */}
@@ -184,7 +184,7 @@ export default function ContactPage() {
               Get Instant Response via WhatsApp
             </motion.div>
 
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 sm:mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4 sm:mb-6">
               <span className="block">Send Your Inquiry</span>
               <span className="block bg-gradient-to-r from-green-600 via-emerald-600 to-teal-600 bg-clip-text text-transparent font-bold">
                 Directly to WhatsApp
@@ -276,7 +276,7 @@ export default function ContactPage() {
                     {/* Content */}
                     <div className="space-y-4">
                       <div>
-                        <h3 className="font-heading font-bold text-lg sm:text-xl text-gray-900 group-hover:text-green-600 transition-colors duration-300 mb-2">
+                        <h3 className="font-heading font-bold text-lg sm:text-xl text-foreground group-hover:text-green-600 transition-colors duration-300 mb-2">
                           {method.title}
                         </h3>
                         <p className="text-gray-600 text-xs sm:text-sm">
@@ -319,7 +319,7 @@ export default function ContactPage() {
             className="max-w-3xl mx-auto"
           >
             <div className="text-center mb-12">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4">
                 Send Your Inquiry
               </h2>
               <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">

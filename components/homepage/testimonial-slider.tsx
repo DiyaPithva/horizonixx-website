@@ -130,7 +130,7 @@ export function TestimonialSlider() {
                 transition={{ duration: 0.5, ease: "easeInOut" }}
                 className="absolute inset-0"
               >
-                <div className="bg-card/80 backdrop-blur-sm border border-border/50 rounded-3xl p-6 sm:p-8 md:p-12 shadow-2xl">
+                <div className="bg-card border border-border/50 rounded-3xl p-6 sm:p-8 md:p-12 shadow-2xl">
                   {/* Quote Icon */}
                   <div className="flex justify-center mb-6">
                     <div className="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center">
@@ -179,7 +179,7 @@ export function TestimonialSlider() {
             {/* Previous Button */}
             <motion.button
               onClick={prevTestimonial}
-              className="p-3 bg-card border border-border rounded-full hover:bg-primary hover:text-white hover:border-primary transition-all duration-300 shadow-lg"
+              className="p-3 bg-white shadow-md hover:bg-gray-100 rounded-full transition-all duration-300"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               aria-label="Previous testimonial"
@@ -212,7 +212,7 @@ export function TestimonialSlider() {
             {/* Next Button */}
             <motion.button
               onClick={nextTestimonial}
-              className="p-3 bg-card border border-border rounded-full hover:bg-primary hover:text-white hover:border-primary transition-all duration-300 shadow-lg"
+              className="p-3 bg-white shadow-md hover:bg-gray-100 rounded-full transition-all duration-300"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               aria-label="Next testimonial"
