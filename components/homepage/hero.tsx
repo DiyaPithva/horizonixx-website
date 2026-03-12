@@ -23,21 +23,21 @@ const leaves = [
 
 export function Hero() {
   return (
-    <section className="relative pb-16 flex justify-center overflow-hidden">
+    <section className="relative isolate pb-16 flex justify-center overflow-hidden">
       {/* Background Gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-secondary/10">
+      <div className="absolute inset-0 -z-10 pointer-events-none bg-gradient-to-br from-primary/5 via-background to-secondary/10">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary/10 via-transparent to-secondary/5"></div>
       </div>
 
       {/* Decorative Gradient Blobs */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+      <div className="absolute inset-0 -z-10 overflow-hidden pointer-events-none">
         <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-br from-primary/10 to-transparent rounded-full blur-2xl opacity-10"></div>
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-br from-secondary/10 to-transparent rounded-full blur-2xl opacity-10"></div>
         <div className="absolute top-1/2 left-1/2 w-[600px] h-[600px] -translate-x-1/2 -translate-y-1/2 bg-gradient-to-br from-accent/20 to-transparent rounded-full blur-2xl opacity-10"></div>
       </div>
 
       {/* Floating Leaves */}
-      <div className="absolute inset-0 pointer-events-none">
+      <div className="absolute inset-0 -z-10 pointer-events-none">
         {leaves.map((leaf, i) => (
           <motion.div
             key={i}
