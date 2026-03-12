@@ -23,12 +23,7 @@ const leaves = [
 
 export function Hero() {
   return (
-    <section className="relative isolate pb-16 flex justify-center overflow-hidden">
-      {/* Background Gradient */}
-      <div className="absolute inset-0 -z-10 pointer-events-none bg-gradient-to-br from-green-50 via-white to-emerald-50">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(34,197,94,0.08),transparent_60%)]"></div>
-      </div>
-
+    <section className="relative isolate pb-16 flex justify-center overflow-hidden hero-bg">
       {/* Decorative Gradient Blobs */}
       <div className="absolute inset-0 -z-10 overflow-hidden pointer-events-none">
         <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-br from-primary/10 to-transparent rounded-full blur-2xl opacity-10"></div>
@@ -90,10 +85,10 @@ export function Hero() {
           </motion.div>
 
           {/* Heading */}
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-[1.25] max-w-4xl mx-auto">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-[1.25] max-w-4xl mx-auto">
             <span className="block mb-2">Trusted Global Supplier of</span>
 
-            <span className="block mt-2 bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">
+            <span className="block mt-2 bg-gradient-to-r from-green-600 via-emerald-500 to-green-600 bg-clip-text text-transparent">
               Premium Herbal & Natural Products
             </span>
           </h1>
