@@ -25,8 +25,8 @@ export function Hero() {
   return (
     <section className="relative isolate pb-16 flex justify-center overflow-hidden">
       {/* Background Gradient */}
-      <div className="absolute inset-0 -z-10 pointer-events-none bg-gradient-to-br from-primary/5 via-background to-secondary/10">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary/10 via-transparent to-secondary/5"></div>
+      <div className="absolute inset-0 -z-10 pointer-events-none bg-gradient-to-br from-green-50 via-white to-emerald-50">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(34,197,94,0.08),transparent_60%)]"></div>
       </div>
 
       {/* Decorative Gradient Blobs */}
