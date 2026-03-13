@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { ScrollingBanner } from "@/components/homepage/scrolling-banner";
 
 const leaves = [
   { top: "10%", left: "5%" },
@@ -18,13 +19,13 @@ const leaves = [
 
 export function Hero() {
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center text-center overflow-hidden bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50">
+    <section className="relative min-h-[85vh] flex flex-col items-center justify-center text-center overflow-hidden pt-6 bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50">
       {/* Decorative Leaf Background */}
-      <div className="absolute inset-0 pointer-events-none opacity-15">
+      <div className="absolute inset-0 pointer-events-none opacity-30">
         {leaves.map((leaf, i) => (
           <motion.div
             key={i}
-            className="absolute"
+            className="absolute w-14 h-14 opacity-30 pointer-events-none"
             style={{ top: leaf.top, left: leaf.left }}
             animate={{
               y: [0, -20, 0],
@@ -37,7 +38,7 @@ export function Hero() {
             }}
           >
             <svg
-              className="w-16 h-16 md:w-20 md:h-20 text-green-600"
+              className="w-14 h-14 text-green-600"
               fill="currentColor"
               viewBox="0 0 24 24"
             >
@@ -114,6 +115,11 @@ export function Hero() {
             </motion.div>
           </motion.div>
         </div>
+      </div>
+
+      {/* Category Pills Banner */}
+      <div className="relative z-10 w-full mt-12">
+        <ScrollingBanner />
       </div>
     </section>
   );

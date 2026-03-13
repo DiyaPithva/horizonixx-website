@@ -1,6 +1,5 @@
 import type { Metadata, Viewport } from 'next';
 import { Hero } from '@/components/homepage/hero';
-import { ScrollingBanner } from '@/components/homepage/scrolling-banner';
 import { FeaturedProducts } from '@/components/homepage/featured-products';
 import { WhyChooseUs } from '@/components/homepage/why-choose-us';
 import { CompanyStats } from '@/components/homepage/company-stats';
@@ -115,13 +114,10 @@ export default function Home() {
 
       {/* Main Content */}
       <main className="bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50">
-        {/* 1. Hero Section */}
+        {/* 1. Hero Section (includes ScrollingBanner inside) */}
         <Hero />
 
-        {/* 2. Scrolling Banner */}
-        <ScrollingBanner />
-
-        {/* 3. Featured Products Section */}
+        {/* 2. Featured Products Section */}
         <AnimatedSection animation="slideUp" delay={0.2}>
           <FeaturedProducts />
         </AnimatedSection>
