@@ -6,20 +6,20 @@ import Link from "next/link";
 const featuredProducts = [
   {
     id: "moringa-powder",
-    name: "Moringa Powder",
+    name: "Moringa Product",
     slug: "moringa-powder",
     image: "/images/products/moringa-powder.webp",
     shortDescription:
-      "Premium quality moringa leaf powder rich in nutrients and antioxidants.",
+      "Complete range of premium moringa products for global markets.",
     category: "herbal-powders",
   },
   {
     id: "ashwagandha",
-    name: "Ashwagandha Powder",
+    name: "Ashwagandha Product",
     slug: "ashwagandha-powder",
     image: "/images/products/Ashwaganda_powder.avif",
     shortDescription:
-      "Pure ashwagandha root powder for stress relief and vitality.",
+      "Comprehensive ashwagandha product range for stress relief and wellness.",
     category: "herbal-powders",
   },
   {
@@ -32,10 +32,10 @@ const featuredProducts = [
   },
   {
     id: "neem",
-    name: "Neem Powder",
+    name: "Neem Product",
     slug: "neem-powder",
     image: "/images/products/Neem_powder.webp",
-    shortDescription: "Natural neem leaf powder with antibacterial properties.",
+    shortDescription: "Complete neem product range with antibacterial properties.",
     category: "herbal-powders",
   },
   {

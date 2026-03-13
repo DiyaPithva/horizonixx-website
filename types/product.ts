@@ -54,6 +54,10 @@ export interface Product {
   images: ProductImage[];
   primaryImage: string;
   
+  // Sub-products (for parent products that act as categories)
+  subProducts?: Product[];
+  isParentProduct?: boolean;
+  
   // Metadata
   seoTitle?: string;
   seoDescription?: string;
