@@ -560,6 +560,38 @@ const mockProducts: Product[] = [
     published: true,
   },
   {
+    id: "4",
+    slug: "spirulina-powder",
+    name: "Spirulina Powder",
+    category: "herbal-powders",
+    description:
+      "Nutrient-dense blue-green algae powder known as a powerful superfood. Spirulina powder is rich in protein, vitamins, minerals, and antioxidants, widely used in health supplements and functional foods. This premium quality spirulina is carefully processed to retain maximum nutritional value.",
+    shortDescription: "Nutrient-dense blue-green algae powder superfood rich in protein and antioxidants.",
+    specifications: {
+      meshSize: "80-120",
+      moisture: "6%",
+      color: "Dark Green",
+    },
+    benefits: [
+      "High protein content",
+      "Rich in vitamins and minerals",
+      "Powerful antioxidant properties",
+      "Supports immune system",
+      "Natural energy booster",
+      "Detoxification support",
+    ],
+    packing: {
+      options: ["5kg bags", "10kg bags", "25kg bags"],
+      customAvailable: true,
+    },
+    images: [],
+    primaryImage: "/images/products/spirulina-powder.jpg",
+    keywords: ["spirulina", "superfood", "protein", "antioxidants", "algae", "herbal"],
+    createdAt: new Date("2024-01-04"),
+    updatedAt: new Date("2024-01-18"),
+    published: true,
+  },
+  {
     id: "5",
     slug: "turmeric-powder",
     name: "Turmeric Powder",
@@ -1231,7 +1263,7 @@ const mockCategories: Category[] = [
     description:
       "Premium quality herbal products for health and wellness applications",
     order: 1,
-    productCount: 9,
+    productCount: 10,
   },
   {
     id: "2",

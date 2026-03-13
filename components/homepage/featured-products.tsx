@@ -42,7 +42,7 @@ const featuredProducts = [
     id: "spirulina",
     name: "Spirulina Powder",
     slug: "spirulina-powder",
-    image: "/images/products/spirulina_powder.jpg",
+    image: "/images/products/spirulina-powder.jpg",
     shortDescription: "Nutrient-dense blue-green algae powder superfood.",
     category: "herbal-powders",
   },
