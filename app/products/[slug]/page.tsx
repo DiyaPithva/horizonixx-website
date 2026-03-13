@@ -283,11 +283,11 @@ export default async function ProductPage({ params }: ProductPageProps) {
                         key={subProduct.id}
                         className="bg-card border border-border rounded-lg p-6 hover:shadow-lg transition-shadow"
                       >
-                        <div className="aspect-square relative mb-4 rounded-lg overflow-hidden bg-accent/20">
+                        <div className="relative mb-4 rounded-lg overflow-hidden bg-accent/20 h-48">
                           <img
                             src={subProduct.primaryImage}
                             alt={subProduct.name}
-                            className="w-full h-full object-cover"
+                            className="w-full h-48 object-cover"
                           />
                         </div>
                         <h3 className="text-xl font-semibold text-foreground mb-2">

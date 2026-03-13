@@ -993,6 +993,234 @@ const mockProducts: Product[] = [
     updatedAt: new Date("2024-02-01"),
     published: true,
   },
+  
+  // COSMETIC PRODUCTS
+  {
+    id: "19",
+    slug: "herbal-lip-balm",
+    name: "Herbal Lip Balm",
+    category: "cosmetic-powders",
+    description:
+      "Natural herbal lip balm formulated with botanical extracts and nourishing oils that help moisturize and protect lips. Made with premium herbal ingredients for daily lip care and protection against environmental factors.",
+    shortDescription: "Natural herbal lip balm formulated with botanical extracts and nourishing oils that help moisturize and protect lips.",
+    specifications: {
+      form: "Balm",
+      packaging: "Tubes/Jars",
+      shelfLife: "24 months",
+    },
+    benefits: [
+      "Deep moisturization",
+      "Natural lip protection",
+      "Botanical extracts",
+      "Nourishing oils",
+      "Long-lasting hydration",
+      "Suitable for all skin types",
+    ],
+    packing: {
+      options: ["Bulk tubes", "Bulk jars", "Custom packaging available"],
+      customAvailable: true,
+    },
+    images: [],
+    primaryImage: "/images/products/cosmetics/herbal-lip-balm.jpg",
+    keywords: ["lip balm", "herbal", "cosmetic", "moisturizer", "natural"],
+    createdAt: new Date("2024-02-01"),
+    updatedAt: new Date("2024-02-15"),
+    published: true,
+  },
+  {
+    id: "20",
+    slug: "herbal-body-lotion",
+    name: "Herbal Body Lotion",
+    category: "cosmetic-powders",
+    description:
+      "Herbal body lotion enriched with plant-based ingredients designed to hydrate and nourish skin. This premium formulation combines traditional herbal extracts with modern skincare science for optimal skin health and radiance.",
+    shortDescription: "Herbal body lotion enriched with plant-based ingredients designed to hydrate and nourish skin.",
+    specifications: {
+      form: "Lotion",
+      packaging: "Bottles/Containers",
+      shelfLife: "24 months",
+    },
+    benefits: [
+      "Deep skin hydration",
+      "Plant-based ingredients",
+      "Nourishes and softens skin",
+      "Non-greasy formula",
+      "Suitable for daily use",
+      "Natural fragrance",
+    ],
+    packing: {
+      options: ["100ml bottles", "250ml bottles", "500ml bottles", "Bulk containers"],
+      customAvailable: true,
+    },
+    images: [],
+    primaryImage: "/images/products/cosmetics/herbal-body-lotion.jpg",
+    keywords: ["body lotion", "herbal", "cosmetic", "moisturizer", "skincare"],
+    createdAt: new Date("2024-02-02"),
+    updatedAt: new Date("2024-02-16"),
+    published: true,
+  },
+  {
+    id: "21",
+    slug: "herbal-toothpaste",
+    name: "Herbal Toothpaste",
+    category: "cosmetic-powders",
+    description:
+      "Herbal toothpaste made from natural extracts known for promoting oral hygiene and fresh breath. Formulated with traditional herbal ingredients that support dental health, gum care, and long-lasting freshness without harsh chemicals.",
+    shortDescription: "Herbal toothpaste made from natural extracts known for promoting oral hygiene and fresh breath.",
+    specifications: {
+      form: "Paste",
+      packaging: "Tubes",
+      shelfLife: "36 months",
+    },
+    benefits: [
+      "Natural oral hygiene",
+      "Fresh breath",
+      "Gum care support",
+      "Herbal extracts",
+      "No harsh chemicals",
+      "Daily dental protection",
+    ],
+    packing: {
+      options: ["Bulk tubes", "Custom packaging available"],
+      customAvailable: true,
+    },
+    images: [],
+    primaryImage: "/images/products/cosmetics/herbal-toothpaste.jpg",
+    keywords: ["toothpaste", "herbal", "oral care", "dental hygiene", "natural"],
+    createdAt: new Date("2024-02-03"),
+    updatedAt: new Date("2024-02-17"),
+    published: true,
+  },
+  
+  // DEHYDRATED FRUITS & VEGETABLES
+  {
+    id: "22",
+    slug: "raisins-dry-grapes",
+    name: "Raisins (Dry Grapes)",
+    category: "dehydrated-powders",
+    description:
+      "Premium quality dehydrated grapes with natural sweetness and high nutritional value. Our raisins are carefully processed to retain maximum nutrients, flavor, and natural sweetness, making them ideal for food processing, bakery applications, and direct consumption.",
+    shortDescription: "Premium quality dehydrated grapes with natural sweetness and high nutritional value.",
+    specifications: {
+      moisture: "15-18%",
+      color: "Golden/Dark Brown",
+      size: "Medium to Large",
+    },
+    benefits: [
+      "Natural sweetness",
+      "High in fiber",
+      "Rich in antioxidants",
+      "Energy booster",
+      "Iron and potassium source",
+      "Versatile ingredient",
+    ],
+    packing: {
+      options: ["5kg bags", "10kg bags", "25kg bags"],
+      customAvailable: true,
+    },
+    images: [],
+    primaryImage: "/images/products/dehydrated/raisins.jpg",
+    keywords: ["raisins", "dry grapes", "dehydrated", "dried fruit", "natural"],
+    createdAt: new Date("2024-02-04"),
+    updatedAt: new Date("2024-02-18"),
+    published: true,
+  },
+  {
+    id: "23",
+    slug: "curry-leaves",
+    name: "Curry Leaves",
+    category: "dehydrated-powders",
+    description:
+      "Carefully dehydrated curry leaves used in food processing and spice blends. These aromatic leaves retain their distinctive flavor and aroma even after dehydration, making them perfect for seasoning mixes, ready-to-eat meals, and culinary applications.",
+    shortDescription: "Carefully dehydrated curry leaves used in food processing and spice blends.",
+    specifications: {
+      moisture: "8-10%",
+      color: "Dark Green",
+      form: "Whole/Crushed",
+    },
+    benefits: [
+      "Aromatic flavor",
+      "Long shelf life",
+      "Convenient to use",
+      "Retains natural properties",
+      "Ideal for spice blends",
+      "Food processing ready",
+    ],
+    packing: {
+      options: ["1kg bags", "5kg bags", "10kg bags"],
+      customAvailable: true,
+    },
+    images: [],
+    primaryImage: "/images/products/dehydrated/curry-leaves.jpg",
+    keywords: ["curry leaves", "dehydrated", "spice", "aromatic", "seasoning"],
+    createdAt: new Date("2024-02-05"),
+    updatedAt: new Date("2024-02-19"),
+    published: true,
+  },
+  {
+    id: "24",
+    slug: "oregano",
+    name: "Oregano",
+    category: "dehydrated-powders",
+    description:
+      "High-quality dried oregano widely used in seasoning blends and culinary applications. Our premium oregano is carefully dried to preserve its robust flavor and aromatic properties, making it essential for Mediterranean cuisine, pizza seasonings, and herb blends.",
+    shortDescription: "High-quality dried oregano widely used in seasoning blends and culinary applications.",
+    specifications: {
+      moisture: "10-12%",
+      color: "Green",
+      form: "Leaves/Crushed",
+    },
+    benefits: [
+      "Robust flavor",
+      "Aromatic properties",
+      "Versatile seasoning",
+      "Long shelf life",
+      "Rich in antioxidants",
+      "Culinary essential",
+    ],
+    packing: {
+      options: ["1kg bags", "5kg bags", "10kg bags"],
+      customAvailable: true,
+    },
+    images: [],
+    primaryImage: "/images/products/dehydrated/oregano.jpg",
+    keywords: ["oregano", "herb", "dehydrated", "seasoning", "culinary"],
+    createdAt: new Date("2024-02-06"),
+    updatedAt: new Date("2024-02-20"),
+    published: true,
+  },
+  {
+    id: "25",
+    slug: "mint",
+    name: "Mint",
+    category: "dehydrated-powders",
+    description:
+      "Dehydrated mint leaves with strong aroma used in herbal teas and seasoning products. Our premium mint leaves are carefully dried to maintain their refreshing flavor and cooling properties, perfect for tea blends, culinary applications, and herbal formulations.",
+    shortDescription: "Dehydrated mint leaves with strong aroma used in herbal teas and seasoning products.",
+    specifications: {
+      moisture: "8-10%",
+      color: "Green",
+      form: "Whole/Crushed",
+    },
+    benefits: [
+      "Refreshing aroma",
+      "Cooling properties",
+      "Digestive support",
+      "Versatile use",
+      "Long-lasting freshness",
+      "Natural flavor enhancer",
+    ],
+    packing: {
+      options: ["1kg bags", "5kg bags", "10kg bags"],
+      customAvailable: true,
+    },
+    images: [],
+    primaryImage: "/images/products/dehydrated/mint.jpg",
+    keywords: ["mint", "dehydrated", "herbal tea", "aromatic", "seasoning"],
+    createdAt: new Date("2024-02-07"),
+    updatedAt: new Date("2024-02-21"),
+    published: true,
+  },
 ];
 
 const mockCategories: Category[] = [
@@ -1012,7 +1240,7 @@ const mockCategories: Category[] = [
     description:
       "Natural cosmetic products for skincare and beauty applications",
     order: 2,
-    productCount: 5,
+    productCount: 8,
   },
   {
     id: "3",
@@ -1029,7 +1257,7 @@ const mockCategories: Category[] = [
     description:
       "Dehydrated fruit and vegetable products for food applications",
     order: 4,
-    productCount: 1,
+    productCount: 5,
   },
 ];
 
