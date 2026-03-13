@@ -10,39 +10,39 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Theme-aware colors using CSS custom properties
+        // Static green color palette
         primary: {
-          DEFAULT: "var(--color-primary)",
+          DEFAULT: "#2e7d32",
           50: "#e8f5e8",
           100: "#c8e6c8",
           200: "#a5d6a7",
           300: "#81c784",
           400: "#66bb6a",
-          500: "var(--color-primary)",
+          500: "#2e7d32",
           600: "#43a047",
           700: "#388e3c",
           800: "#2e7d32",
           900: "#1b5e20",
         },
         secondary: {
-          DEFAULT: "var(--color-secondary)",
+          DEFAULT: "#4caf50",
           50: "#e8f5e8",
           100: "#c8e6c8",
           200: "#a5d6a7",
           300: "#81c784",
           400: "#66bb6a",
-          500: "var(--color-secondary)",
+          500: "#4caf50",
           600: "#43a047",
           700: "#388e3c",
           800: "#2e7d32",
           900: "#1b5e20",
         },
         accent: {
-          DEFAULT: "var(--color-accent)",
+          DEFAULT: "#f5f7f2",
           50: "#fefffe",
           100: "#fdfefc",
           200: "#fbfcf9",
-          300: "var(--color-accent)",
+          300: "#f5f7f2",
           400: "#f0f3eb",
           500: "#e8ebe5",
           600: "#d4d7d0",
@@ -50,16 +50,16 @@ const config: Config = {
           800: "#9ca09a",
           900: "#7d817c",
         },
-        background: "var(--color-background)",
-        foreground: "var(--color-foreground)",
+        background: "#ffffff",
+        foreground: "#111827",
         muted: {
-          DEFAULT: "var(--color-muted)",
-          foreground: "var(--color-muted)",
+          DEFAULT: "#6b7280",
+          foreground: "#6b7280",
         },
-        border: "var(--color-border)",
+        border: "#e5e7eb",
         card: {
-          DEFAULT: "var(--color-card)",
-          foreground: "var(--color-card-foreground)",
+          DEFAULT: "#ffffff",
+          foreground: "#111827",
         },
         // Semantic colors
         success: "#10b981",
@@ -68,7 +68,12 @@ const config: Config = {
         info: "#3b82f6",
       },
       fontFamily: {
-        heading: ["var(--font-poppins)", "Poppins", "Playfair Display", "serif"],
+        heading: [
+          "var(--font-poppins)",
+          "Poppins",
+          "Playfair Display",
+          "serif",
+        ],
         body: ["var(--font-inter)", "Inter", "system-ui", "sans-serif"],
       },
       fontSize: {
@@ -97,10 +102,10 @@ const config: Config = {
         "slide-right": "slideRight 0.6s ease-out",
         "scale-in": "scaleIn 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55)",
         "bounce-gentle": "bounceGentle 0.8s ease-out",
-        "float": "float 4s ease-in-out infinite",
+        float: "float 4s ease-in-out infinite",
         "pulse-slow": "pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite",
         "spin-slow": "spin 3s linear infinite",
-        "wiggle": "wiggle 1s ease-in-out infinite",
+        wiggle: "wiggle 1s ease-in-out infinite",
       },
       keyframes: {
         fadeIn: {
@@ -142,11 +147,13 @@ const config: Config = {
         xs: "2px",
       },
       boxShadow: {
-        "glass": "0 8px 32px 0 rgba(31, 38, 135, 0.37)",
+        glass: "0 8px 32px 0 rgba(31, 38, 135, 0.37)",
         "glass-dark": "0 8px 32px 0 rgba(0, 0, 0, 0.5)",
-        "soft": "0 2px 15px -3px rgba(0, 0, 0, 0.07), 0 10px 20px -2px rgba(0, 0, 0, 0.04)",
-        "medium": "0 4px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 30px -5px rgba(0, 0, 0, 0.05)",
-        "large": "0 10px 50px -12px rgba(0, 0, 0, 0.15), 0 20px 40px -10px rgba(0, 0, 0, 0.1)",
+        soft: "0 2px 15px -3px rgba(0, 0, 0, 0.07), 0 10px 20px -2px rgba(0, 0, 0, 0.04)",
+        medium:
+          "0 4px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 30px -5px rgba(0, 0, 0, 0.05)",
+        large:
+          "0 10px 50px -12px rgba(0, 0, 0, 0.15), 0 20px 40px -10px rgba(0, 0, 0, 0.1)",
       },
     },
   },

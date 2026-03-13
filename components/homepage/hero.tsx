@@ -94,7 +94,7 @@ export function Hero() {
           </h1>
 
           {/* Description */}
-          <p className="text-base sm:text-lg md:text-xl text-muted max-w-3xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Delivering excellence in herbal raw materials, cosmetic ingredients,
             and natural products to industries worldwide.
           </p>

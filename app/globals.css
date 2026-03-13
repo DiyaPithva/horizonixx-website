@@ -2,94 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-/* CSS Custom Properties for Dynamic Theming */
-:root {
-  /* Light Mode Colors - Enhanced Premium Palette */
-  --color-primary: #2e7d32;
-  --color-secondary: #4caf50;
-  --color-accent: #f5f7f2;
-  --color-background: #ffffff;
-  --color-foreground: #1a1a1a;
-  --color-muted: #6b7280;
-  --color-border: #e5e7eb;
-  --color-card: #ffffff;
-  --color-card-foreground: #1a1a1a;
-
-  /* Enhanced Primary Palette */
-  --color-primary-50: #e8f5e8;
-  --color-primary-100: #c8e6c8;
-  --color-primary-500: #2e7d32;
-  --color-primary-600: #43a047;
-  --color-primary-700: #388e3c;
-
-  /* Legacy variables for compatibility */
-  --background: var(--color-background);
-  --foreground: var(--color-foreground);
-
-  /* Enhanced Glassmorphism variables */
-  --glass-background: rgba(255, 255, 255, 0.1);
-  --glass-border: rgba(255, 255, 255, 0.2);
-  --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-
-  /* Premium Shadows */
-  --shadow-soft:
-    0 2px 15px -3px rgba(0, 0, 0, 0.07), 0 10px 20px -2px rgba(0, 0, 0, 0.04);
-  --shadow-medium:
-    0 4px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 30px -5px rgba(0, 0, 0, 0.05);
-  --shadow-large:
-    0 10px 50px -12px rgba(0, 0, 0, 0.15), 0 20px 40px -10px rgba(0, 0, 0, 0.1);
-}
-
-/* Dark Mode Colors - Enhanced Premium Palette */
-.dark {
-  --color-primary: #4caf50;
-  --color-secondary: #66bb6a;
-  --color-accent: #2d3748;
-  --color-background: #0f1a12;
-  --color-foreground: #f7fafc;
-  --color-muted: #a0aec0;
-  --color-border: #2d3748;
-  --color-card: #1a202c;
-  --color-card-foreground: #f7fafc;
-
-  /* Enhanced Primary Palette for Dark Mode */
-  --color-primary-50: #1b5e20;
-  --color-primary-100: #2e7d32;
-  --color-primary-500: #4caf50;
-  --color-primary-600: #66bb6a;
-  --color-primary-700: #81c784;
-
-  /* Legacy variables for compatibility */
-  --background: var(--color-background);
-  --foreground: var(--color-foreground);
-
-  /* Dark mode glassmorphism */
-  --glass-background: rgba(0, 0, 0, 0.2);
-  --glass-border: rgba(255, 255, 255, 0.1);
-  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
-
-  /* Premium Dark Shadows */
-  --shadow-soft:
-    0 2px 15px -3px rgba(0, 0, 0, 0.3), 0 10px 20px -2px rgba(0, 0, 0, 0.2);
-  --shadow-medium:
-    0 4px 25px -5px rgba(0, 0, 0, 0.4), 0 10px 30px -5px rgba(0, 0, 0, 0.3);
-  --shadow-large:
-    0 10px 50px -12px rgba(0, 0, 0, 0.6), 0 20px 40px -10px rgba(0, 0, 0, 0.4);
-}
-
-/* Enhanced smooth theme transitions */
-* {
-  transition-property:
-    color, background-color, border-color, text-decoration-color, fill, stroke,
-    box-shadow, transform;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 300ms;
-}
-
 /* Base styles with enhanced typography */
 body {
-  color: var(--color-foreground);
-  background: var(--color-background);
+  color: #111827;
+  background: #ffffff;
   font-family: var(--font-inter), Inter, system-ui, sans-serif;
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
@@ -109,46 +25,26 @@ h6 {
   font-weight: 600;
   line-height: 1.2;
   letter-spacing: -0.02em;
-  color: var(--color-foreground);
-}
-
-/* Dark mode heading styles */
-.dark h1,
-.dark h2,
-.dark h3,
-.dark h4,
-.dark h5,
-.dark h6 {
-  color: var(--color-foreground);
-}
-
-/* Dark mode input styles */
-.dark .input {
-  @apply border-gray-600 bg-gray-800 text-gray-100 placeholder:text-gray-400 focus:border-green-500 focus:ring-green-300;
-}
-
-/* Dark mode card styles */
-.dark .card {
-  @apply border-gray-700 bg-gray-800;
+  color: #111827;
 }
 
 /* Premium paragraph styling */
 p {
   line-height: 1.7;
-  color: var(--color-muted);
+  color: #6b7280;
 }
 
 /* Enhanced link styling */
 a {
-  color: var(--color-primary);
+  color: #2e7d32;
   text-decoration: none;
   transition: all 0.2s ease;
 }
 
 a:hover {
-  color: var(--color-secondary);
+  color: #4caf50;
   text-decoration: underline;
-  text-decoration-color: var(--color-secondary);
+  text-decoration-color: #4caf50;
   text-underline-offset: 4px;
 }
 
@@ -160,21 +56,21 @@ a:hover {
 
   /* Glassmorphism utility classes */
   .glass {
-    background: var(--glass-background);
+    background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    border: 1px solid var(--glass-border);
-    box-shadow: var(--glass-shadow);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   }
 
   .glass-card {
     @apply glass rounded-xl;
   }
 
-  /* Theme-aware scrollbar */
+  /* Scrollbar */
   .scrollbar-thin {
     scrollbar-width: thin;
-    scrollbar-color: var(--color-muted) transparent;
+    scrollbar-color: #6b7280 transparent;
   }
 
   .scrollbar-thin::-webkit-scrollbar {
@@ -186,25 +82,31 @@ a:hover {
   }
 
   .scrollbar-thin::-webkit-scrollbar-thumb {
-    background-color: var(--color-muted);
+    background-color: #6b7280;
     border-radius: 3px;
   }
 
   .scrollbar-thin::-webkit-scrollbar-thumb:hover {
-    background-color: var(--color-border);
+    background-color: #e5e7eb;
   }
 
   /* Enhanced Shadow utilities */
   .shadow-soft {
-    box-shadow: var(--shadow-soft);
+    box-shadow:
+      0 2px 15px -3px rgba(0, 0, 0, 0.07),
+      0 10px 20px -2px rgba(0, 0, 0, 0.04);
   }
 
   .shadow-medium {
-    box-shadow: var(--shadow-medium);
+    box-shadow:
+      0 4px 25px -5px rgba(0, 0, 0, 0.1),
+      0 10px 30px -5px rgba(0, 0, 0, 0.05);
   }
 
   .shadow-large {
-    box-shadow: var(--shadow-large);
+    box-shadow:
+      0 10px 50px -12px rgba(0, 0, 0, 0.15),
+      0 20px 40px -10px rgba(0, 0, 0, 0.1);
   }
 
   .shadow-3xl {
@@ -213,19 +115,11 @@ a:hover {
 
   /* Premium gradient utilities */
   .gradient-primary {
-    background: linear-gradient(
-      135deg,
-      var(--color-primary) 0%,
-      var(--color-secondary) 100%
-    );
+    background: linear-gradient(135deg, #2e7d32 0%, #4caf50 100%);
   }
 
   .gradient-text-primary {
-    background: linear-gradient(
-      135deg,
-      var(--color-primary) 0%,
-      var(--color-secondary) 100%
-    );
+    background: linear-gradient(135deg, #2e7d32 0%, #4caf50 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;

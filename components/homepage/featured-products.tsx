@@ -1,57 +1,59 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import Link from 'next/link';
+import { motion } from "framer-motion";
+import Link from "next/link";
 
 const featuredProducts = [
   {
-    id: 'moringa-powder',
-    name: 'Moringa Powder',
-    slug: 'moringa-powder',
-    image: '/images/products/moringa-powder.webp',
-    shortDescription: 'Premium quality moringa leaf powder rich in nutrients and antioxidants.',
-    category: 'herbal-powders'
+    id: "moringa-powder",
+    name: "Moringa Powder",
+    slug: "moringa-powder",
+    image: "/images/products/moringa-powder.webp",
+    shortDescription:
+      "Premium quality moringa leaf powder rich in nutrients and antioxidants.",
+    category: "herbal-powders",
   },
   {
-    id: 'ashwagandha',
-    name: 'Ashwagandha Powder',
-    slug: 'ashwagandha-powder',
-    image: '/images/products/Ashwaganda_powder.avif',
-    shortDescription: 'Pure ashwagandha root powder for stress relief and vitality.',
-    category: 'herbal-powders'
+    id: "ashwagandha",
+    name: "Ashwagandha Powder",
+    slug: "ashwagandha-powder",
+    image: "/images/products/Ashwaganda_powder.avif",
+    shortDescription:
+      "Pure ashwagandha root powder for stress relief and vitality.",
+    category: "herbal-powders",
   },
   {
-    id: 'tulsi',
-    name: 'Tulsi Powder',
-    slug: 'tulsi-powder',
-    image: '/images/products/Tulsi_powder.webp',
-    shortDescription: 'Sacred basil powder with immune-boosting properties.',
-    category: 'herbal-powders'
+    id: "amla",
+    name: "Amla Powder",
+    slug: "amla-powder",
+    image: "/images/products/amla_powder.jpeg",
+    shortDescription: "Vitamin C rich amla powder for health and wellness.",
+    category: "herbal-powders",
   },
   {
-    id: 'amla',
-    name: 'Amla Powder',
-    slug: 'amla-powder',
-    image: '/images/products/amla_powder.jpeg',
-    shortDescription: 'Vitamin C rich amla powder for health and wellness.',
-    category: 'herbal-powders'
+    id: "neem",
+    name: "Neem Powder",
+    slug: "neem-powder",
+    image: "/images/products/Neem_powder.webp",
+    shortDescription: "Natural neem leaf powder with antibacterial properties.",
+    category: "herbal-powders",
   },
   {
-    id: 'neem',
-    name: 'Neem Powder',
-    slug: 'neem-powder',
-    image: '/images/products/Neem_powder.webp',
-    shortDescription: 'Natural neem leaf powder with antibacterial properties.',
-    category: 'herbal-powders'
+    id: "spirulina",
+    name: "Spirulina Powder",
+    slug: "spirulina-powder",
+    image: "/images/products/spirulina_powder.jpg",
+    shortDescription: "Nutrient-dense blue-green algae powder superfood.",
+    category: "herbal-powders",
   },
   {
-    id: 'spirulina',
-    name: 'Spirulina Powder',
-    slug: 'spirulina-powder',
-    image: '/images/products/spirulina_powder.jpg',
-    shortDescription: 'Nutrient-dense blue-green algae powder superfood.',
-    category: 'herbal-powders'
-  }
+    id: "turmeric",
+    name: "Turmeric Powder",
+    slug: "turmeric-powder",
+    image: "/images/products/turmeric-powder.jpg",
+    shortDescription: "Pure turmeric powder with high curcumin content.",
+    category: "spices",
+  },
 ];
 
 export function FeaturedProducts() {
@@ -76,8 +78,9 @@ export function FeaturedProducts() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-base sm:text-lg text-muted max-w-2xl mx-auto px-4 sm:px-0"
           >
-            Discover our premium selection of herbal products and natural ingredients, 
-            sourced from the finest suppliers and processed with the highest quality standards.
+            Discover our premium selection of herbal products and natural
+            ingredients, sourced from the finest suppliers and processed with
+            the highest quality standards.
           </motion.p>
         </div>
 
@@ -128,15 +131,25 @@ export function FeaturedProducts() {
                     <p className="text-gray-600 dark:text-gray-300 text-sm mb-4 sm:mb-6 line-clamp-2 flex-1">
                       {product.shortDescription}
                     </p>
-                    
+
                     {/* View Details Button */}
                     <div className="flex items-center justify-between mt-auto">
                       <span className="text-green-600 font-semibold group-hover:text-green-700 transition-colors">
                         View Details
                       </span>
                       <div className="w-10 h-10 bg-green-50 dark:bg-green-900/30 rounded-full flex items-center justify-center group-hover:bg-green-600 group-hover:text-white transition-all duration-300">
-                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        <svg
+                          className="w-5 h-5"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M9 5l7 7-7 7"
+                          />
                         </svg>
                       </div>
                     </div>
@@ -155,7 +168,10 @@ export function FeaturedProducts() {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="text-center mt-8 sm:mt-12"
         >
-          <Link href="/products" className="inline-flex items-center px-6 sm:px-8 py-3 sm:py-4 border-2 border-primary text-primary hover:bg-primary hover:text-white transition-all duration-300 rounded-xl font-medium text-base sm:text-lg">
+          <Link
+            href="/products"
+            className="inline-flex items-center px-6 sm:px-8 py-3 sm:py-4 border-2 border-primary text-primary hover:bg-primary hover:text-white transition-all duration-300 rounded-xl font-medium text-base sm:text-lg"
+          >
             View All Products
           </Link>
         </motion.div>
