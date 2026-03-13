@@ -18,7 +18,7 @@ const leaves = [
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50">
+    <section className="relative min-h-[90vh] flex items-center justify-center text-center overflow-hidden bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50">
       {/* Decorative Leaf Background */}
       <div className="absolute inset-0 pointer-events-none opacity-15">
         {leaves.map((leaf, i) => (
@@ -48,7 +48,7 @@ export function Hero() {
       </div>
 
       {/* Main Content */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}

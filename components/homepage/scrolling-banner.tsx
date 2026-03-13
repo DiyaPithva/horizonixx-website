@@ -20,11 +20,11 @@ export function ScrollingBanner() {
   const allItems = [...scrollingItems, ...scrollingItems, ...scrollingItems];
 
   return (
-    <div className="w-full bg-white/90 backdrop-blur-md shadow-sm border-y border-green-100 py-4">
+    <div className="w-full min-h-[80px] bg-white/90 backdrop-blur-md shadow-sm border-y border-green-100 py-6">
       <div className="container mx-auto px-4">
         {/* Scrolling Container */}
         <motion.div
-          className="flex items-center whitespace-nowrap"
+          className="flex items-center gap-4 whitespace-nowrap"
           animate={{
             x: [0, -100 * scrollingItems.length - (scrollingItems.length * 8)] // Account for spacing
           }}
@@ -43,7 +43,7 @@ export function ScrollingBanner() {
           {allItems.map((item, index) => (
             <div
               key={index}
-              className="inline-flex items-center space-x-2 px-4 py-2 mx-2 bg-green-50 rounded-full border border-green-200 flex-shrink-0"
+              className="flex items-center gap-2 px-5 py-3 rounded-full bg-white border border-green-200 shadow-sm flex-shrink-0"
             >
               <div className="w-2 h-2 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex-shrink-0"></div>
               <span className="text-sm font-medium text-gray-700 whitespace-nowrap">
