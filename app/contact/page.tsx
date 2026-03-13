@@ -192,7 +192,7 @@ export default function ContactPage() {
             </h1>
             
             <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed px-4 sm:px-0">
-              Fill out the form below and we'll prepare your inquiry message for WhatsApp. 
+              Fill out the form below and we&apos;ll prepare your inquiry message for WhatsApp. 
               Get instant connection with our herbal export specialists.
             </p>
           </motion.div>
@@ -231,8 +231,8 @@ export default function ContactPage() {
                   details: [
                     { 
                       label: "Business Inquiries", 
-                      value: "info.horizonixxinternational0509@gmail.com", 
-                      href: "mailto:info.horizonixxinternational0509@gmail.com" 
+                      value: "info.horizonixxinternational@gmail.com", 
+                      href: "mailto:info.horizonixxinternational@gmail.com" 
                     }
                   ],
                   color: "from-green-500 to-green-600"
@@ -323,7 +323,7 @@ export default function ContactPage() {
                 Send Your Inquiry
               </h2>
               <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
-                Fill out the form below and we'll prepare your inquiry message for WhatsApp. 
+                Fill out the form below and we&apos;ll prepare your inquiry message for WhatsApp. 
                 Get instant connection with our herbal export specialists.
               </p>
             </div>

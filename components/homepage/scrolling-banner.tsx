@@ -20,8 +20,8 @@ export function ScrollingBanner() {
   const allItems = [...scrollingItems, ...scrollingItems, ...scrollingItems];
 
   return (
-    <section className="py-6 sm:py-8 bg-gradient-to-r from-green-100/50 via-emerald-100/30 to-teal-100/50 border-y border-green-200/30 overflow-hidden">
-      <div className="relative">
+    <div className="w-full bg-white/90 backdrop-blur-md shadow-sm border-y border-green-100 py-4">
+      <div className="container mx-auto px-4">
         {/* Scrolling Container */}
         <motion.div
           className="flex items-center whitespace-nowrap"
@@ -43,20 +43,16 @@ export function ScrollingBanner() {
           {allItems.map((item, index) => (
             <div
               key={index}
-              className="flex items-center space-x-2 px-3 sm:px-4 py-2 mx-3 sm:mx-4 bg-white/60 backdrop-blur-sm rounded-full border border-green-200/50 shadow-sm hover:bg-white/80 transition-colors duration-300 flex-shrink-0"
+              className="inline-flex items-center space-x-2 px-4 py-2 mx-2 bg-green-50 rounded-full border border-green-200 flex-shrink-0"
             >
               <div className="w-2 h-2 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex-shrink-0"></div>
-              <span className="text-xs sm:text-sm md:text-base font-medium text-gray-700 flex-shrink-0">
+              <span className="text-sm font-medium text-gray-700 whitespace-nowrap">
                 {item}
               </span>
             </div>
           ))}
         </motion.div>
-
-        {/* Gradient overlays for smooth fade effect */}
-        <div className="absolute left-0 top-0 bottom-0 w-12 sm:w-16 md:w-24 bg-gradient-to-r from-green-100 via-green-100/80 to-transparent pointer-events-none z-10"></div>
-        <div className="absolute right-0 top-0 bottom-0 w-12 sm:w-16 md:w-24 bg-gradient-to-l from-green-100 via-green-100/80 to-transparent pointer-events-none z-10"></div>
       </div>
-    </section>
+    </div>
   );
 }

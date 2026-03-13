@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Prevent horizontal scrollbar */
+html,
+body {
+  overflow-x: hidden;
+}
+
 /* Base styles with enhanced typography */
 body {
   color: #111827;

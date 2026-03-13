@@ -4,52 +4,40 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 
 const leaves = [
-  { top: "8%", left: "10%" },
-  { top: "15%", left: "85%" },
-  { top: "25%", left: "30%" },
-  { top: "35%", left: "70%" },
-  { top: "45%", left: "15%" },
-  { top: "55%", left: "90%" },
-  { top: "65%", left: "40%" },
-  { top: "75%", left: "75%" },
-  { top: "20%", left: "55%" },
-  { top: "50%", left: "60%" },
-  { top: "70%", left: "20%" },
-  { top: "80%", left: "45%" },
-  { top: "30%", left: "80%" },
-  { top: "60%", left: "5%" },
-  { top: "40%", left: "50%" },
+  { top: "10%", left: "5%" },
+  { top: "15%", left: "90%" },
+  { top: "25%", left: "15%" },
+  { top: "30%", left: "85%" },
+  { top: "40%", left: "8%" },
+  { top: "50%", left: "92%" },
+  { top: "60%", left: "12%" },
+  { top: "70%", left: "88%" },
+  { top: "80%", left: "20%" },
+  { top: "85%", left: "80%" },
 ];
 
 export function Hero() {
   return (
-    <section className="relative isolate pb-16 flex justify-center overflow-hidden hero-bg">
-      {/* Decorative Gradient Blobs */}
-      <div className="absolute inset-0 -z-10 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-br from-primary/10 to-transparent rounded-full blur-2xl opacity-10"></div>
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-br from-secondary/10 to-transparent rounded-full blur-2xl opacity-10"></div>
-        <div className="absolute top-1/2 left-1/2 w-[600px] h-[600px] -translate-x-1/2 -translate-y-1/2 bg-gradient-to-br from-accent/20 to-transparent rounded-full blur-2xl opacity-10"></div>
-      </div>
-
-      {/* Floating Leaves */}
-      <div className="absolute inset-0 -z-10 pointer-events-none">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50">
+      {/* Decorative Leaf Background */}
+      <div className="absolute inset-0 pointer-events-none opacity-15">
         {leaves.map((leaf, i) => (
           <motion.div
             key={i}
-            className="absolute opacity-20"
+            className="absolute"
             style={{ top: leaf.top, left: leaf.left }}
             animate={{
-              y: [0, -25, 0],
+              y: [0, -20, 0],
               rotate: [0, 10, -10, 0],
             }}
             transition={{
-              duration: 10 + i,
+              duration: 8 + i * 0.5,
               repeat: Infinity,
               ease: "easeInOut",
             }}
           >
             <svg
-              className="w-10 h-10 md:w-12 md:h-12 text-primary"
+              className="w-16 h-16 md:w-20 md:h-20 text-green-600"
               fill="currentColor"
               viewBox="0 0 24 24"
             >
@@ -60,71 +48,72 @@ export function Hero() {
       </div>
 
       {/* Main Content */}
-      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center pt-10">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="max-w-5xl mx-auto space-y-6"
-        >
-          {/* Premium Badge */}
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
+        <div className="text-center">
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6 }}
-            className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-primary/10 to-secondary/10 border border-primary/20 rounded-full text-sm font-medium text-primary backdrop-blur-sm"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="space-y-8"
           >
-            <svg
-              className="w-4 h-4 mr-2"
-              fill="currentColor"
-              viewBox="0 0 24 24"
+            {/* Premium Badge */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6 }}
+              className="flex justify-center"
             >
-              <path d="M12,2L13.09,8.26L22,9L13.09,9.74L12,16L10.91,9.74L2,9L10.91,8.26L12,2Z" />
-            </svg>
-            Premium Herbal Extracts for Global Markets
-          </motion.div>
+              <div className="inline-flex items-center px-4 py-2 bg-white/80 backdrop-blur-sm border border-green-200 rounded-full text-sm font-medium text-green-700 shadow-sm">
+                <svg
+                  className="w-4 h-4 mr-2"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M12,2L13.09,8.26L22,9L13.09,9.74L12,16L10.91,9.74L2,9L10.91,8.26L12,2Z" />
+                </svg>
+                Premium Herbal Extracts for Global Markets
+              </div>
+            </motion.div>
 
-          {/* Heading */}
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-[1.25] max-w-4xl mx-auto">
-            <span className="block mb-2">Trusted Global Supplier of</span>
+            {/* Heading */}
+            <div className="space-y-4">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-tight text-center">
+                <span className="block">Trusted Global Supplier of</span>
+                <span className="block mt-2 bg-gradient-to-r from-green-600 via-emerald-500 to-green-600 bg-clip-text text-transparent">
+                  Premium Herbal & Natural Products
+                </span>
+              </h1>
 
-            <span className="block mt-2 bg-gradient-to-r from-green-600 via-emerald-500 to-green-600 bg-clip-text text-transparent">
-              Premium Herbal & Natural Products
-            </span>
-          </h1>
+              {/* Description */}
+              <p className="text-lg sm:text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed text-center">
+                Delivering excellence in herbal raw materials, cosmetic ingredients,
+                and natural products to industries worldwide.
+              </p>
+            </div>
 
-          {/* Description */}
-          <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Delivering excellence in herbal raw materials, cosmetic ingredients,
-            and natural products to industries worldwide.
-          </p>
-
-          {/* Buttons */}
-          <motion.div
-            className="flex flex-col sm:flex-row gap-4 justify-center pt-6"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.4 }}
-          >
-            <motion.div whileHover={{ scale: 1.05 }}>
+            {/* Buttons */}
+            <motion.div
+              className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.4 }}
+            >
               <Link
                 href="/products"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-600 to-emerald-600 text-white font-semibold rounded-xl shadow-lg transition-all"
+                className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-green-600 to-emerald-600 text-white font-semibold text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
               >
                 Explore Products
               </Link>
-            </motion.div>
 
-            <motion.div whileHover={{ scale: 1.05 }}>
               <Link
                 href="/contact"
-                className="inline-flex items-center px-8 py-4 border-2 border-primary text-primary font-semibold rounded-xl hover:bg-primary hover:text-white transition-all"
+                className="inline-flex items-center justify-center px-8 py-4 border-2 border-green-600 text-green-600 font-semibold text-lg rounded-xl hover:bg-green-600 hover:text-white transition-all duration-300"
               >
                 Get Quote
               </Link>
             </motion.div>
           </motion.div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

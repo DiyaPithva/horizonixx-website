@@ -97,8 +97,8 @@ export function TestimonialSlider() {
   };
 
   return (
-    <section className="py-16 sm:py-20 bg-gradient-to-br from-green-100/20 via-emerald-100/10 to-teal-100/20 overflow-hidden">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-24 bg-gradient-to-br from-green-100/20 via-emerald-100/10 to-teal-100/20">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 pb-12">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -119,8 +119,32 @@ export function TestimonialSlider() {
           onMouseEnter={() => setIsAutoPlaying(false)}
           onMouseLeave={() => setIsAutoPlaying(true)}
         >
+          {/* Navigation Arrows - Outside card */}
+          {/* Previous Button */}
+          <button
+            onClick={prevTestimonial}
+            className="absolute left-[-60px] top-1/2 -translate-y-1/2 z-20 bg-white shadow-md rounded-full p-3 hover:scale-110 transition text-gray-700"
+            aria-label="Previous testimonial"
+          >
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+
+          {/* Next Button */}
+          <button
+            onClick={nextTestimonial}
+            className="absolute right-[-60px] top-1/2 -translate-y-1/2 z-20 bg-white shadow-md rounded-full p-3 hover:scale-110 transition text-gray-700"
+            aria-label="Next testimonial"
+          >
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+
           {/* Main Testimonial Display */}
-          <div className="relative h-96 sm:h-80 md:h-64">
+          <div className="relative mb-12">
+            <div className="min-h-[420px] sm:min-h-[380px] md:min-h-[320px]">
             <AnimatePresence mode="wait">
               <motion.div
                 key={currentIndex}
@@ -144,7 +168,7 @@ export function TestimonialSlider() {
                   <div className="text-center space-y-6">
                     {/* Quote */}
                     <blockquote className="text-base sm:text-lg md:text-xl text-foreground leading-relaxed italic px-4 sm:px-0">
-                      "{testimonials[currentIndex].quote}"
+                      &ldquo;{testimonials[currentIndex].quote}&rdquo;
                     </blockquote>
 
                     {/* Rating */}
@@ -153,19 +177,19 @@ export function TestimonialSlider() {
                     </div>
 
                     {/* Client Info */}
-                    <div className="space-y-2">
-                      <h4 className="font-heading font-bold text-base sm:text-lg text-foreground">
+                    <div className="space-y-1">
+                      <h4 className="font-bold text-lg text-gray-900">
                         {testimonials[currentIndex].clientName}
                       </h4>
-                      <p className="text-primary font-medium text-sm sm:text-base">
+                      <p className="text-green-600 font-semibold text-base">
                         {testimonials[currentIndex].company}
                       </p>
-                      <div className="flex items-center justify-center space-x-2 text-muted">
+                      <div className="flex items-center justify-center space-x-2 text-gray-500">
                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                         </svg>
-                        <span className="text-sm">{testimonials[currentIndex].country}</span>
+                        <span className="text-sm font-medium">{testimonials[currentIndex].country}</span>
                       </div>
                     </div>
                   </div>
@@ -173,54 +197,27 @@ export function TestimonialSlider() {
               </motion.div>
             </AnimatePresence>
           </div>
+          </div>
 
           {/* Navigation Controls */}
-          <div className="flex items-center justify-between mt-6 sm:mt-8 px-4 sm:px-0">
-            {/* Previous Button */}
-            <motion.button
-              onClick={prevTestimonial}
-              className="p-3 bg-white shadow-md hover:bg-gray-100 rounded-full transition-all duration-300"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              aria-label="Previous testimonial"
-            >
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-              </svg>
-            </motion.button>
-
+          <div className="flex items-center justify-center mt-6 px-4 sm:px-0 relative z-10">
             {/* Pagination Dots */}
-            <div className="flex space-x-2">
+            <div className="flex space-x-3 bg-white/80 backdrop-blur-sm px-4 py-3 rounded-full shadow-md">
               {testimonials.map((_, index) => (
-                <motion.button
+                <button
                   key={index}
                   onClick={() => goToTestimonial(index)}
                   className={`
-                    w-3 h-3 rounded-full transition-all duration-300
+                    h-2.5 rounded-full transition-all duration-300
                     ${index === currentIndex 
-                      ? 'bg-primary scale-125' 
-                      : 'bg-border hover:bg-primary/50'
+                      ? 'w-10 bg-green-600' 
+                      : 'w-2.5 bg-gray-400 hover:bg-green-400'
                     }
                   `}
-                  whileHover={{ scale: 1.2 }}
-                  whileTap={{ scale: 0.9 }}
                   aria-label={`Go to testimonial ${index + 1}`}
                 />
               ))}
             </div>
-
-            {/* Next Button */}
-            <motion.button
-              onClick={nextTestimonial}
-              className="p-3 bg-white shadow-md hover:bg-gray-100 rounded-full transition-all duration-300"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              aria-label="Next testimonial"
-            >
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </motion.button>
           </div>
 
           {/* Auto-play Indicator */}
@@ -238,7 +235,7 @@ export function TestimonialSlider() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
           viewport={{ once: true }}
-          className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 mt-12 sm:mt-16 max-w-3xl mx-auto px-4 sm:px-0"
+          className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 mt-16 max-w-3xl mx-auto px-4 sm:px-0"
         >
           {[
             { number: "150+", label: "Happy Clients" },
