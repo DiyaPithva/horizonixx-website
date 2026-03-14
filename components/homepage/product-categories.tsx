@@ -24,7 +24,7 @@ const categories = [
         />
       </svg>
     ),
-    href: "/products?category=herbal-products",
+    href: "/products?category=herbal-powders",
     features: ["Moringa Powder", "Ashwagandha", "Multani Mitti", "Sandalwood"],
     gradient: "from-green-500/20 to-emerald-500/20",
     color: "text-green-600",
@@ -121,7 +121,7 @@ const categories = [
         />
       </svg>
     ),
-    href: "/products?category=dehydrated-fruits-vegetables",
+    href: "/products?category=dehydrated-powders",
     features: [
       "Beetroot Powder",
       "Mango Powder",

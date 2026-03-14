@@ -1253,6 +1253,75 @@ const mockProducts: Product[] = [
     updatedAt: new Date("2024-02-21"),
     published: true,
   },
+
+  // HEALTHCARE EQUIPMENT
+  {
+    id: "26",
+    slug: "medical-face-mask",
+    name: "Medical Face Mask",
+    category: "healthcare-equipment",
+    description:
+      "High-quality disposable medical face masks designed for protection against dust, bacteria, and airborne particles. Widely used in hospitals, clinics, laboratories, and industrial environments.",
+    shortDescription: "Disposable medical face masks for protection against dust, bacteria, and airborne particles.",
+    specifications: {
+      material: "Non-woven fabric",
+      layers: "3-ply",
+      color: "Blue",
+      usage: "Disposable",
+      size: "Standard",
+    },
+    benefits: [
+      "Protection against dust and bacteria",
+      "Comfortable fit",
+      "Breathable non-woven fabric",
+      "Suitable for hospitals and clinics",
+      "Lightweight and disposable",
+      "Meets medical standards",
+    ],
+    packing: {
+      options: ["Box packing: 50 pcs", "Carton packing: 1000 pcs"],
+      customAvailable: true,
+    },
+    images: [],
+    primaryImage: "/images/products/healthcare/mask.jpg",
+    keywords: ["face mask", "medical", "disposable", "healthcare", "protection", "PPE"],
+    createdAt: new Date("2024-03-01"),
+    updatedAt: new Date("2024-03-15"),
+    published: true,
+  },
+  {
+    id: "27",
+    slug: "medical-gloves",
+    name: "Medical Examination Gloves",
+    category: "healthcare-equipment",
+    description:
+      "Disposable medical examination gloves designed for hygiene and protection. Suitable for hospitals, clinics, laboratories, food processing units, and industrial environments.",
+    shortDescription: "Disposable medical examination gloves for hygiene and protection in clinical and industrial use.",
+    specifications: {
+      material: "Latex / Nitrile",
+      color: "White / Blue",
+      type: "Powdered / Powder-free",
+      size: "S, M, L, XL",
+    },
+    benefits: [
+      "Superior hand protection",
+      "Latex and nitrile options",
+      "Powder-free variants available",
+      "Suitable for sensitive skin",
+      "Meets medical examination standards",
+      "Versatile industrial use",
+    ],
+    packing: {
+      options: ["Box packing: 100 pcs", "Carton packing: 1000 pcs"],
+      customAvailable: true,
+    },
+    images: [],
+    primaryImage: "/images/products/healthcare/gloves.jpg",
+    keywords: ["gloves", "medical", "examination", "disposable", "healthcare", "nitrile", "latex"],
+    createdAt: new Date("2024-03-02"),
+    updatedAt: new Date("2024-03-16"),
+    published: true,
+  },
 ];
 
 const mockCategories: Category[] = [
@@ -1290,6 +1359,15 @@ const mockCategories: Category[] = [
       "Dehydrated fruit and vegetable products for food applications",
     order: 4,
     productCount: 5,
+  },
+  {
+    id: "5",
+    slug: "healthcare-equipment",
+    name: "Healthcare Equipment",
+    description:
+      "Medical and healthcare equipment for hospitals, clinics, and healthcare facilities",
+    order: 5,
+    productCount: 2,
   },
 ];
 
