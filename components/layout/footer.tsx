@@ -230,13 +230,13 @@ export function Footer() {
             </p>
             <div className="flex flex-col sm:flex-row justify-center space-y-2 sm:space-y-0 sm:space-x-6">
               <Link
-                href="/privacy"
+                href="/privacy-policy"
                 className="text-xs sm:text-sm text-muted hover:text-primary transition-colors"
               >
                 Privacy Policy
               </Link>
               <Link
-                href="/terms"
+                href="/terms-of-service"
                 className="text-xs sm:text-sm text-muted hover:text-primary transition-colors"
               >
                 Terms of Service
