@@ -76,21 +76,7 @@ export function CertificationCard({ certification, variant = 'card' }: Certifica
           Issued by {certification.issuer}
         </p>
 
-        {/* Certification Number - only in card variant */}
-        {isCard && certification.certificationNumber && (
-          <div className="pt-2 border-t border-white/10">
-            <p className="text-xs text-muted-foreground text-center">
-              Cert. No: {certification.certificationNumber}
-            </p>
-          </div>
-        )}
 
-        {/* Issue Date - only in card variant */}
-        {isCard && certification.issueDate && (
-          <p className="text-xs text-muted-foreground text-center">
-            Issued: {new Date(certification.issueDate).toLocaleDateString()}
-          </p>
-        )}
       </div>
 
       {/* Hover effect overlay */}
