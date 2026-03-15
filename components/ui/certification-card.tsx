@@ -17,7 +17,7 @@ export function CertificationCard({ certification, variant = 'card' }: Certifica
     backdrop-blur-md bg-white/10 dark:bg-white/5
     border border-white/20 dark:border-white/10
     shadow-lg hover:shadow-xl
-    ${isCard ? 'rounded-2xl p-6 space-y-4 min-h-[280px] max-w-sm' : ''}
+    ${isCard ? 'rounded-2xl p-6 space-y-4 min-h-[200px] max-w-sm' : ''}
     ${isBadge ? 'rounded-xl p-4 space-y-2 min-h-[160px] max-w-xs' : ''}
   `;
 
@@ -37,12 +37,6 @@ export function CertificationCard({ certification, variant = 'card' }: Certifica
     text-muted-foreground text-center font-medium
     ${isCard ? 'text-sm mb-3' : ''}
     ${isBadge ? 'text-xs mb-1' : ''}
-  `;
-
-  const scopeClasses = `
-    text-muted-foreground text-center leading-relaxed
-    ${isCard ? 'text-sm' : ''}
-    ${isBadge ? 'text-xs' : ''}
   `;
 
   return (
@@ -80,14 +74,6 @@ export function CertificationCard({ certification, variant = 'card' }: Certifica
           data-testid="certification-issuer"
         >
           Issued by {certification.issuer}
-        </p>
-
-        {/* Scope - always show, truncate in badge variant */}
-        <p 
-          className={scopeClasses}
-          data-testid="certification-scope"
-        >
-          {isCard ? certification.scope : `${certification.scope?.substring(0, 50) || ''}${(certification.scope?.length || 0) > 50 ? '...' : ''}`}
         </p>
 
         {/* Certification Number - only in card variant */}
