@@ -32,13 +32,13 @@ export function Navigation() {
       <nav className="container mx-auto px-4 lg:px-6">
         <div className="flex items-center justify-between h-18 lg:h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 group">
+          <Link href="/" className="flex items-center gap-1 group">
             <Image
               src="/images/logo/horizonixx-logo.png"
               alt="Horizonixx International"
-              width={200}
-              height={56}
-              className="h-12 w-auto sm:h-14 object-contain"
+              width={220}
+              height={64}
+              className="h-14 w-auto sm:h-16 object-contain"
               priority
             />
             <div className="hidden sm:block">

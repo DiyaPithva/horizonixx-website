@@ -427,12 +427,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link
                     href="/contact"
-                    className="
-                      px-8 py-4 bg-primary text-primary-foreground
-                      rounded-lg font-semibold text-lg
-                      hover:bg-primary/90 transition-colors
-                      text-center
-                    "
+                    className="px-8 py-4 bg-green-700 text-white rounded-lg font-semibold text-lg hover:bg-green-800 transition-colors text-center"
                   >
                     Request Quote
                   </Link>
