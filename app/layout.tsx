@@ -93,6 +93,14 @@ export const metadata: Metadata = {
   publisher: "HORIZONIXX INTERNATIONAL",
   robots: "index, follow",
   metadataBase: new URL("https://horizonixx-international.com"),
+  icons: {
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/favicon.png", type: "image/png" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: "/favicon.png",
+  },
 };
 
 export default function RootLayout({

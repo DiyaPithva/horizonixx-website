@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -31,34 +32,20 @@ export function Navigation() {
       <nav className="container mx-auto px-4 lg:px-6">
         <div className="flex items-center justify-between h-18 lg:h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-3 group">
-            <div className="relative">
-              <motion.div
-                className="w-12 h-12 bg-gradient-to-br from-primary via-secondary to-primary rounded-xl flex items-center justify-center shadow-lg"
-                whileHover={{ scale: 1.05, rotate: 5 }}
-                transition={{ type: "spring", stiffness: 400, damping: 10 }}
-              >
-                <svg
-                  className="w-7 h-7 text-white"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2.5}
-                    d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"
-                  />
-                </svg>
-              </motion.div>
-              <div className="absolute -inset-2 bg-gradient-to-br from-primary/30 to-secondary/30 rounded-xl blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            </div>
+          <Link href="/" className="flex items-center gap-3 group">
+            <Image
+              src="/images/logo/horizonixx-logo.png"
+              alt="Horizonixx International"
+              width={200}
+              height={56}
+              className="h-12 w-auto sm:h-14 object-contain"
+              priority
+            />
             <div className="hidden sm:block">
-              <div className="font-heading font-bold text-xl text-gray-900 tracking-tight">
+              <div className="font-heading font-bold text-xl text-gray-900 leading-tight">
                 HORIZONIXX
               </div>
-              <div className="text-xs text-green-600 font-medium -mt-1 tracking-wider">
+              <div className="text-sm text-green-600 font-medium tracking-wide leading-tight">
                 INTERNATIONAL
               </div>
             </div>
