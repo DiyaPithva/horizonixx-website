@@ -170,7 +170,7 @@ export function FeaturedProducts() {
         >
           <Link
             href="/products"
-            className="inline-flex items-center px-6 sm:px-8 py-3 sm:py-4 border-2 border-primary text-primary hover:bg-primary hover:text-white transition-all duration-300 rounded-xl font-medium text-base sm:text-lg"
+            className="inline-flex items-center px-6 sm:px-8 py-3 sm:py-4 border-2 border-green-700 text-green-700 hover:bg-green-700 hover:text-white transition-all duration-300 rounded-xl font-medium text-base sm:text-lg"
           >
             View All Products
           </Link>

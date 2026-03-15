@@ -277,7 +277,7 @@ export function ProductCategories() {
               </Link>
               <Link
                 href="/products"
-                className="inline-flex items-center justify-center px-6 py-3 border-2 border-primary text-primary hover:bg-primary hover:text-white transition-all duration-300 rounded-xl font-medium"
+                className="inline-flex items-center justify-center px-6 py-3 border-2 border-green-700 text-green-700 hover:bg-green-700 hover:text-white transition-all duration-300 rounded-xl font-medium"
               >
                 View All Products
               </Link>

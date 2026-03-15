@@ -385,12 +385,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
                   <div className="text-center">
                     <Link
                       href={`/products?category=${product.category}`}
-                      className="
-                        inline-flex items-center gap-2
-                        px-6 py-3 bg-primary text-primary-foreground
-                        rounded-lg font-medium
-                        hover:bg-primary/90 transition-colors
-                      "
+                      className="inline-flex items-center gap-2 px-6 py-3 bg-green-700 text-white rounded-lg font-medium hover:bg-green-800 transition-colors"
                     >
                       View All {product.category.replace('-', ' ').replace(/\b\w/g, l => l.toUpperCase())}
                       <svg
