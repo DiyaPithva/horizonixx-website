@@ -32,7 +32,7 @@ export function Navigation() {
       <nav className="container mx-auto px-4 lg:px-6">
         <div className="flex items-center justify-between h-18 lg:h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 group">
+          <Link href="/" className="flex items-center gap-2 group">
             <Image
               src="/images/logo/horizonixx-logo.png"
               alt="Horizonixx International"
