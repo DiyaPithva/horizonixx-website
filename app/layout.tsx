@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, Poppins } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import { themeInitScript } from "@/lib/theme-script";
 import { ThemeProvider } from "@/components/providers/theme-provider";
@@ -122,6 +123,19 @@ export default function RootLayout({
         className={`${inter.variable} ${poppins.variable} font-body antialiased`}
         suppressHydrationWarning
       >
+        {/* Google Analytics GA4 */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-WBF75T318B"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-WBF75T318B');
+          `}
+        </Script>
         <ThemeProvider>
           <Navigation />
           <main>{children}</main>
