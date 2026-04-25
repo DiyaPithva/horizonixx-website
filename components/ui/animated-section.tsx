@@ -18,7 +18,7 @@ const animationVariants = {
     visible: { opacity: 1 }
   },
   slideUp: {
-    hidden: { opacity: 0, y: 50 },
+    hidden: { opacity: 0, y: 30 },
     visible: { opacity: 1, y: 0 }
   },
   slideLeft: {
@@ -41,8 +41,8 @@ export function AnimatedSection({
   const ref = useRef(null);
   const isInView = useInView(ref, { 
     once: true, 
-    margin: '-100px',
-    amount: threshold 
+    margin: '0px',
+    amount: 0.05
   });
 
   return (
