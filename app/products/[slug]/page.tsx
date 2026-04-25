@@ -363,7 +363,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
               <div className="container mx-auto px-4">
                 <div className="space-y-8">
                   <div className="text-center">
-                    <h2 className="text-3xl font-bold text-foreground mb-4">
+                    <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-foreground mb-4">
                       Related Products
                     </h2>
                     <p className="text-muted max-w-2xl mx-auto">

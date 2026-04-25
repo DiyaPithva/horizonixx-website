@@ -62,13 +62,13 @@ export default function AboutPage() {
     <main className="min-h-screen bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50">
       {/* Hero Section */}
       <AnimatedSection animation="fadeIn">
-        <section className="bg-gradient-to-br from-green-100/50 via-emerald-100/30 to-teal-100/50 pt-8 pb-20">
+        <section className="bg-gradient-to-br from-green-100/50 via-emerald-100/30 to-teal-100/50 pt-8 pb-10 sm:pb-16 md:pb-20">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-gray-900 mb-6">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-heading font-bold text-gray-900 mb-4 sm:mb-6">
                 About HORIZONIXX INTERNATIONAL
               </h1>
-              <p className="text-xl md:text-2xl text-gray-600 leading-relaxed">
+              <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 leading-relaxed px-2 sm:px-0">
                 Your trusted global partner in premium herbal products, cosmetic
                 ingredients, and natural solutions
               </p>
@@ -79,15 +79,15 @@ export default function AboutPage() {
 
       {/* Company Description Section */}
       <AnimatedSection animation="slideUp" delay={0.1}>
-        <section className="py-20">
+        <section className="py-10 sm:py-14 md:py-20">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
-              <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
                 <div>
-                  <h2 className="text-3xl md:text-4xl font-heading font-bold text-gray-900 mb-6">
+                  <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-heading font-bold text-gray-900 mb-4 sm:mb-6">
                     Who We Are
                   </h2>
-                  <div className="space-y-6 text-lg text-gray-600 leading-relaxed">
+                  <div className="space-y-4 text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed">
                     <p>
                       HORIZONIXX INTERNATIONAL is a leading global distributor
                       specializing in the sourcing, repacking, and export of
@@ -157,14 +157,14 @@ export default function AboutPage() {
       </AnimatedSection>
       {/* Mission Statement Section */}
       <AnimatedSection animation="slideUp" delay={0.1}>
-        <section className="py-20 bg-white/30 backdrop-blur-sm">
+        <section className="py-10 sm:py-14 md:py-20 bg-white/30 backdrop-blur-sm">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-8">
+              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-heading font-bold text-foreground mb-6 sm:mb-8">
                 Our Mission
               </h2>
-              <div className="bg-card/50 backdrop-blur-sm rounded-2xl p-8 md:p-12 border border-primary/10">
-                <blockquote className="text-xl md:text-2xl text-foreground leading-relaxed italic">
+              <div className="bg-card/50 backdrop-blur-sm rounded-2xl p-6 sm:p-8 md:p-12 border border-primary/10">
+                <blockquote className="text-base sm:text-lg md:text-xl lg:text-2xl text-foreground leading-relaxed italic">
                   &ldquo;To be the world&apos;s most trusted partner in sourcing
                   and supplying premium herbal products and natural ingredients,
                   bridging the gap between traditional wisdom and modern
@@ -172,7 +172,7 @@ export default function AboutPage() {
                   quality, sustainability, and customer satisfaction.&rdquo;
                 </blockquote>
               </div>
-              <div className="mt-12 grid md:grid-cols-3 gap-8">
+              <div className="mt-8 sm:mt-12 grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8">
                 <div className="text-center">
                   <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
                     <svg
@@ -249,17 +249,17 @@ export default function AboutPage() {
       </AnimatedSection>
       {/* Company History Timeline */}
       <AnimatedSection animation="slideUp" delay={0.1}>
-        <section className="py-20">
-          <div className="container mx-auto px-6">
-            <div className="max-w-4xl mx-auto mb-16">
-              <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground text-center">
+        <section className="py-10 sm:py-14 md:py-20">
+          <div className="container mx-auto px-4 sm:px-6">
+            <div className="max-w-4xl mx-auto mb-8 sm:mb-12 md:mb-16">
+              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-heading font-bold text-foreground text-center">
                 Our Journey
               </h2>
             </div>
 
             {/* Timeline Container with Center Line */}
-            <div className="relative before:absolute before:left-1/2 before:top-0 before:h-full before:w-[2px] before:bg-green-200 before:-translate-x-1/2">
-              <div className="grid md:grid-cols-2 gap-16 max-w-6xl mx-auto">
+            <div className="relative before:hidden md:before:block before:absolute before:left-1/2 before:top-0 before:h-full before:w-[2px] before:bg-green-200 before:-translate-x-1/2">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 md:gap-16 max-w-6xl mx-auto">
                 {/* Left Column */}
                 <div className="space-y-12">
                   <div className="bg-white/40 backdrop-blur-sm rounded-xl p-6 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300">
@@ -362,13 +362,13 @@ export default function AboutPage() {
       </AnimatedSection>
       {/* Product Categories Section */}
       <AnimatedSection animation="slideUp" delay={0.1}>
-        <section className="py-20 bg-white/30 backdrop-blur-sm">
+        <section className="py-10 sm:py-14 md:py-20 bg-white/30 backdrop-blur-sm">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground text-center mb-16">
+              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-heading font-bold text-foreground text-center mb-8 sm:mb-12 md:mb-16">
                 Product Categories We Handle
               </h2>
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
                 <div className="bg-card/50 backdrop-blur-sm rounded-xl p-6 border border-primary/10 hover:border-primary/30 transition-colors">
                   <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4">
                     <svg
@@ -499,13 +499,13 @@ export default function AboutPage() {
       </AnimatedSection>
       {/* Quality Standards Section */}
       <AnimatedSection animation="slideUp" delay={0.1}>
-        <section className="py-20">
+        <section className="py-10 sm:py-14 md:py-20">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground text-center mb-16">
-                Quality Standards & Global Reach
+              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-heading font-bold text-foreground text-center mb-8 sm:mb-12 md:mb-16">
+                Quality Standards &amp; Global Reach
               </h2>
-              <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
                 <div>
                   <h3 className="text-2xl font-semibold text-foreground mb-6">
                     ISO 9001:2015 Certified Excellence
@@ -589,7 +589,7 @@ export default function AboutPage() {
 
       {/* Global Export Map Section */}
       <AnimatedSection animation="slideUp" delay={0.1}>
-        <section className="py-20 bg-white/30 backdrop-blur-sm">
+        <section className="py-10 sm:py-14 md:py-20 bg-white/30 backdrop-blur-sm">
           <div className="container mx-auto px-4">
             <GlobalExportMap />
           </div>
@@ -598,13 +598,13 @@ export default function AboutPage() {
 
       {/* Call to Action Section */}
       <AnimatedSection animation="slideUp" delay={0.1}>
-        <section className="py-20 bg-gradient-to-br from-green-100/50 via-emerald-100/30 to-teal-100/50">
+        <section className="py-10 sm:py-14 md:py-20 bg-gradient-to-br from-green-100/50 via-emerald-100/30 to-teal-100/50">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-6">
+              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-heading font-bold text-foreground mb-4 sm:mb-6">
                 Ready to Partner with Us?
               </h2>
-              <p className="text-xl text-muted-foreground mb-8">
+              <p className="text-sm sm:text-base md:text-lg lg:text-xl text-muted-foreground mb-6 sm:mb-8 px-2 sm:px-0">
                 Join our growing network of satisfied clients worldwide.
                 Let&apos;s discuss how we can meet your specific requirements
                 for premium herbal and natural products.

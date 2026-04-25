@@ -78,7 +78,7 @@ export function Hero() {
 
             {/* Heading */}
             <div className="space-y-4">
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-tight text-center">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-gray-900 leading-tight text-center">
                 <span className="block">Trusted Global Supplier of</span>
                 <span className="block mt-2 bg-gradient-to-r from-green-600 via-emerald-500 to-green-600 bg-clip-text text-transparent">
                   Premium Herbal & Natural Products
@@ -86,7 +86,7 @@ export function Hero() {
               </h1>
 
               {/* Description */}
-              <p className="text-lg sm:text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed text-center">
+              <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed text-center px-2">
                 Delivering excellence in herbal raw materials, cosmetic ingredients,
                 and natural products to industries worldwide.
               </p>
@@ -101,14 +101,14 @@ export function Hero() {
             >
               <Link
                 href="/products"
-                className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-green-600 to-emerald-600 text-white font-semibold text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+                className="w-full sm:w-auto inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-green-600 to-emerald-600 text-white font-semibold text-base sm:text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
               >
                 Explore Products
               </Link>
 
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center px-8 py-4 border-2 border-green-600 text-green-600 font-semibold text-lg rounded-xl hover:bg-green-600 hover:text-white transition-all duration-300"
+                className="w-full sm:w-auto inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 border-2 border-green-600 text-green-600 font-semibold text-base sm:text-lg rounded-xl hover:bg-green-600 hover:text-white transition-all duration-300"
               >
                 Get Quote
               </Link>

@@ -71,11 +71,11 @@ export default async function ProductsPage({
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
 
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4">
-              Premium Herbal, Cosmetic & Dehydrated Products
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+              Premium Herbal, Cosmetic &amp; Dehydrated Products
             </h1>
 
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-10">
+            <p className="text-sm sm:text-base md:text-lg text-gray-600 max-w-2xl mx-auto mb-6 sm:mb-10 px-2 sm:px-0">
               Discover our extensive range of high-quality herbal products,
               cosmetic products, spices, and dehydrated fruits & vegetables.
               Carefully sourced and processed to meet global quality standards.

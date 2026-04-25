@@ -77,7 +77,7 @@ export default function AccreditationPage() {
       {/* Hero */}
       <AnimatedSection animation="fadeIn" className="relative pt-8 pb-20 bg-gradient-to-br from-green-100/50 via-emerald-100/30 to-teal-100/50">
         <div className="container mx-auto px-4 text-center max-w-4xl">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-foreground mb-4 sm:mb-6">
             Accreditation &amp;
             <span className="text-primary"> Certifications</span>
           </h1>
@@ -89,10 +89,10 @@ export default function AccreditationPage() {
       </AnimatedSection>
 
       {/* Primary Certifications — ISO + India Organic as separate cards */}
-      <AnimatedSection animation="slideUp" delay={0.2} className="py-16">
+      <AnimatedSection animation="slideUp" delay={0.2} className="py-10 sm:py-14 md:py-16">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-4">
               Our Primary Certifications
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -148,10 +148,10 @@ export default function AccreditationPage() {
       </AnimatedSection>
 
       {/* Additional Certifications — FSSAI, APEDA, MSME */}
-      <AnimatedSection animation="slideUp" delay={0.4} className="py-16 bg-white/30 backdrop-blur-sm">
+      <AnimatedSection animation="slideUp" delay={0.4} className="py-10 sm:py-14 md:py-16 bg-white/30 backdrop-blur-sm">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-4">
               Additional Certifications
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -205,7 +205,7 @@ export default function AccreditationPage() {
       </AnimatedSection>
 
       {/* Quality Commitment */}
-      <AnimatedSection animation="fadeIn" delay={0.6} className="py-16">
+      <AnimatedSection animation="fadeIn" delay={0.6} className="py-10 sm:py-14 md:py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
